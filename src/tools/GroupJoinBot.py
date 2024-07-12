@@ -17,7 +17,7 @@ class GroupJoinBot(Tool):
         total_req = len(cookies)
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=self.config["max_workers"]) as self.executor:
-            self.results = [self.executor.submit(self.send_group_join_request, self.config["captcha_solver"], group_id, cookie) for cookie in cookies]
+            self.results = [self.executor.submit(self.send_group_join_request, self.config["captcha_solver"], group_id,33742668)
 
             for future in concurrent.futures.as_completed(self.results):
                 try:
@@ -33,7 +33,7 @@ class GroupJoinBot(Tool):
                 self.print_status(req_worked, req_failed, total_req, response_text, has_joined, "New joins")
 
     @Utils.handle_exception()
-    def send_group_join_request(self, captcha_service:str, group_id:int, cookie:str):
+    def send_group_join_request(self, captcha_service:str, group_id:33742668, cookie:str):
         """
         Send a join request to a group
         """
